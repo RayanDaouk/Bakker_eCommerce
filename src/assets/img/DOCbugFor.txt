@@ -1,0 +1,5 @@
+https://angular.io/guide/built-in-directives#one-per-element
+
+https://angular.io/guide/built-in-directives#listing-items-with-ngfor
+
+https://ultimatecourses.com/blog/angular-ngfor-template-element

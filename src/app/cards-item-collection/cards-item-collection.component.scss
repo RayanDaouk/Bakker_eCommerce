@@ -1,0 +1,79 @@
+/* ---------------------------------- THEME --------------------------------- */
+/* PALETTE */
+$color_secondaryVeryLight: #f0f0f0;
+$color_tertiary: #ff8045;
+$color_quaternary: #275d38;
+
+// FONT SIZE
+$font_sizeM: 18px;
+
+// TIMING COLOR ANIMATION BTN
+$time: 300ms;
+
+// MARGIN
+$marginText: 10px;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+
+.cardsContainer {
+  padding: 0;
+  width: 260px;
+  height: 400px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.cardsContainer__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $color_secondaryVeryLight;
+  font-size: $font-sizeM;
+  font-weight: bold;
+  color: $color_quaternary;
+  padding-left: $marginText;
+}
+
+.cardsContainer__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* -------------------------------- ELEMENTS -------------------------------- */
+
+.cardsContainer__description {
+  padding-left: $marginText;
+  font-size: $font_sizeM;
+}
+
+.cardsContainer__addCartBtn {
+  background-color: $color_tertiary;
+  border: none;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+.cardsContainer__cartIcon {
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  color: white;
+}
+
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+.--addCartHoverBrightness:hover {
+  filter: brightness(1.3);
+  transition: all $time;
+}
+
+/* -------------------------------- keyframes -------------------------------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

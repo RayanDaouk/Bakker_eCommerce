@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "text":"ASSORTIMENT DE CADEAUX",
+        "image":"//cdn.shopify.com/s/files/1/0238/9196/8064/files/1.894x346_Cadeau_idee_800x_crop_center.jpg?v=1633685115",
+        "tag":"NOUVEAUTÉ"
+    },
+    {
+        "id":2,
+        "text":"ÉQUIPEZ-VOUS ET METTEZ-VOUS AU TRAVAIL!",
+        "image":"//cdn.shopify.com/s/files/1/0238/9196/8064/files/2.894x346_Tuingereedschap_800x_crop_center.jpg?v=1633685168",
+        "tag":"LIVRAISON GRATUITE"
+    },
+    {
+        "id":3,
+        "text":"PENSEZ AUX ARBUSTES FLEURIS",
+        "image":"//cdn.shopify.com/s/files/1/0238/9196/8064/files/3.894x346_Bloeiende_heesters_800x_crop_center.jpg?v=1633685206",
+        "tag":"LIVRAISON GRATUITE"
+    }
+]

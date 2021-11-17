@@ -1,0 +1,174 @@
+/* -------------------------------------------------------------------------- */
+/*                                    THEME                                   */
+/* -------------------------------------------------------------------------- */
+@font-face {
+  font-family: roboto;
+  src: local(
+    "//wsl$/Ubuntu/home/krayths/www/eCommerce/bakker/src/app/font/roboto/Roboto-Black.ttf"
+  );
+}
+
+// PALETTE
+$color_quaternary: #275d38;
+$color_secondaryVeryLight: #f0f0f0;
+$color_primary: #555555;
+$color_tertiary: #ff8045;
+
+// MARGIN ELEMENTS
+$marginMainUnderNav: 200px;
+$marginTxtBtnArticle: 25px;
+$paddingFullBleed: 12%;
+
+// FONT SIZE
+$font_sizeSm: 12px;
+$font_sizeMm: 14px;
+$font_sizeM: 18px;
+$font_sizeXl: 22px;
+$font_sizeXxl: 26px;
+$title_letterSpace: 1px;
+
+// TIMING ANIMATION COLOR btn
+$time: 300ms;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+.appContainer {
+  font-family: roboto, sans-serif;
+}
+
+.siteHeader {
+  box-shadow: 1px 9px 22px -4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+}
+
+.routerContainer {
+  position: relative;
+  z-index: unset;
+  margin: $marginMainUnderNav $paddingFullBleed 0 $paddingFullBleed;
+  background-color: white;
+}
+
+.siteFooter__mailBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color_secondaryVeryLight;
+  padding: 10px $paddingFullBleed;
+  margin-top: 15px;
+}
+
+.siteFooter__inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.contactList__container {
+  display: flex;
+  padding: 0 $paddingFullBleed;
+  justify-content: space-between;
+}
+
+.contactList__iconContainer {
+  display: flex;
+}
+
+/* -------------------------------- ELEMENTS -------------------------------- */
+/* --------------------------------- header --------------------------------- */
+.topBar__list {
+  margin: 0;
+  display: flex;
+  padding: 3px 0;
+  justify-content: center;
+  color: $color_quaternary;
+  list-style-type: none;
+  font-size: $font_sizeSm;
+  background-color: $color_secondaryVeryLight;
+  @at-root & li {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.topBar__iconList {
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+}
+
+.siteHeader__logo {
+  width: 12%;
+  padding: 10px $paddingFullBleed;
+}
+
+/* --------------------------------- footer --------------------------------- */
+/* ----------------------------- footer__mailBar ----------------------------- */
+.siteFooter__mailBarMsg {
+  color: $color_primary;
+  font-size: $font_sizeXl;
+  letter-spacing: $title_letterSpace;
+}
+.siteFooter__input {
+  height: 50px;
+  width: 550px;
+  font-size: $font_sizeXl;
+  padding-left: 10px;
+  border: 1px solid transparent;
+  outline: none;
+}
+.siteFooter__btn {
+  margin: 0;
+  width: 100px;
+  height: 50px;
+  font-size: $font_sizeM;
+  color: white;
+  background-color: $color_quaternary;
+  border: 1px solid $color_quaternary;
+}
+/* --------------------------- footer__contactList -------------------------- */
+.contactList__listTitle {
+  color: $color_quaternary;
+  font-size: $font_sizeM;
+}
+
+.contactList__list {
+  list-style: none;
+  padding: 0;
+}
+
+.contactList__listItem {
+  font-size: $font_sizeMm;
+  margin: 5px 0;
+  color: $color_primary;
+  text-decoration: none;
+}
+
+.contactList__contactIcon {
+  width: 30px;
+}
+
+.contactList__itemIcon {
+  padding-left: 10px;
+}
+
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+.--whiteHoverBtn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: $color_quaternary;
+  transition: all $time;
+}
+
+.--greenHoverList:hover {
+  color: $color_quaternary;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.--greenHoverIcon:hover {
+  color: $color_quaternary;
+  cursor: pointer;
+}

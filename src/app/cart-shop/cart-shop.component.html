@@ -1,0 +1,35 @@
+<button class="cartContainer --cartHoverTertiary" (click)="enabled()">
+    <svg class="cart_icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>
+    <span>({{totalCost}}€)</span>
+    <span class="cartContainer__numberArticle">{{numberArticles}}</span>
+</button>
+<div class="detailsOfCart" *ngIf="isActivated">
+    <div class="detailsOfCart__articles">
+        <div class="detailsOfCart__articles__topBar">
+            <h2 class="topBar__title">Panier</h2>
+            <button class="topBar__btn" (click)="disabled()">
+                <svg class="topBar__btn__icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490"
+                    style="enable-background:new 0 0 490 490;" xml:space="preserve">
+                    <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 
+            	489.292,457.678 277.331,245.004 489.292,32.337 " />
+                </svg>
+            </button>
+
+        </div>
+        <div *ngIf='numberArticles != 0' class="detailsOfCart__articles__list">
+            <app-article-in-cart *ngFor="let item of productList" [img]='item.img' [text]='item.description'
+                [count]='item.quantity' [price]='item.price' [cost]='item.cost' [item]='item'></app-article-in-cart>
+        </div>
+        <div class="detailsOfCart__bottomBar">
+            <div class="detailsOfCart__bottomBar__totalPrice">
+                <span>Sous-total:</span>
+                <span>{{totalCost}}€</span>
+            </div>
+            <button class="detailsOfCart__bottomBar__btn" type="button">accéder au paiement</button>
+        </div>
+    </div>
+</div>

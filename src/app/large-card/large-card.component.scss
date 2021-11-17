@@ -1,0 +1,66 @@
+/* ---------------------------------- THEME --------------------------------- */
+// PALETTE
+$color_tertiary: #ff8045;
+
+// FONT SIZE
+$font_sizeSm: 12px;
+$font_sizeXxl: 26px;
+$title_letterSpace: 1px;
+
+// MARGIN
+$marginTxtBtnArticle: 25px;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+.containerArticle {
+  position: relative;
+}
+
+.containerArticle__txtContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+}
+/* -------------------------------- ELEMENTS -------------------------------- */
+
+.containerArticle__image {
+  width: 100%;
+  height: 100%;
+}
+
+.containerArticle__text {
+  color: white;
+  font-weight: bold;
+  font-size: $font_sizeXxl;
+  letter-spacing: $title_letterSpace;
+  margin-left: $marginTxtBtnArticle;
+  margin-bottom: $marginTxtBtnArticle;
+}
+
+.containerArticle__tag {
+  height: 80px;
+  width: 80px;
+  background-color: $color_tertiary;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font_sizeSm;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+/* ----------------------------- STATIC MODIFIER ---------------------------- */
+.containerArticle {
+  cursor: pointer;
+}
+
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */

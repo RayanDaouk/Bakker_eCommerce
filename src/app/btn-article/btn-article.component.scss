@@ -1,0 +1,35 @@
+/* ---------------------------------- THEME --------------------------------- */
+/* PALETTE */
+$color_primary: #555555;
+$color_secondary: #a3a3a3;
+$color_secondaryLight: #c7c7c7;
+$color_hoverBtn_background: #eeeeee;
+$color_tertiary: #ff8045;
+$color_quaternary: #275d38;
+
+// FONT SIZE
+$font_sizeSm: 12px;
+
+// TIMING COLOR ANIMATION BTN
+$time: 300ms;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+
+/* -------------------------------- ELEMENT -------------------------------- */
+.btnArticles {
+  color: $color_quaternary;
+  font-weight: bolder;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border: 1px solid white;
+  font-size: $font_sizeSm;
+}
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+.--btnHoverQuaternary:hover {
+  background-color: $color_quaternary;
+  color: white;
+  transition: all $time;
+  cursor: pointer;
+}

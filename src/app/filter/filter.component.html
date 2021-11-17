@@ -1,0 +1,27 @@
+<div class="filters">
+    <h4 class="filters__title">PRIX</h4>
+    <ul class="filters__list">
+        <li class="filters__option">
+            <button class="filters__optionBtn" [class.--isChecked]="isActivated[0]" type="button" id="check0_19"
+                (click)='filtering(0)'></button>
+            <label for="0€-19€">0€-19€</label>
+        </li>
+        <li class="filters__option">
+            <button class="filters__optionBtn" [class.--isChecked]="isActivated[1]" type="button" id="check20_29"
+                (click)='filtering(1)'></button>
+            <label for="20€-29€">20€-29€</label>
+        </li>
+        <li class="filters__option">
+            <button class="filters__optionBtn" [class.--isChecked]="isActivated[2]" type="button" id="check30_39"
+                (click)='filtering(2)'></button>
+            <label for="30€-39€">30€-39€</label>
+        </li>
+        <li class="filters__option">
+            <button class="filters__optionBtn" [class.--isChecked]="isActivated[3]" type="button" id="check40_49"
+                (click)='filtering(3)'></button>
+            <label for="40€-49€">40€-49€</label>
+        </li>
+    </ul>
+    <button class="filters__resetBtn --btnHoverBrightness" type="button" (click)='resetFilter()'>Retirer les
+        filtres</button>
+</div>

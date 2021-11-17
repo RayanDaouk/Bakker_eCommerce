@@ -1,0 +1,85 @@
+/* ---------------------------------- THEME --------------------------------- */
+/* PALETTE */
+$color_quaternary: #275d38;
+
+// FONT SIZE
+$font_sizeSm: 12px;
+$font_sizeM: 18px;
+$font_sizeXl: 22px;
+$font_sizeXxl: 26px;
+$title_letterSpace: 1px;
+
+// MARGIN
+$marginTxtBtnArticle: 25px;
+$marginCards: 10px;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section__article1 {
+  height: 400px;
+  width: 65.5%;
+  position: relative;
+}
+
+.section__article2 {
+  height: 400px;
+  position: relative;
+}
+
+.section__txtBtnContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+//section 2 and section 3 margin cards
+.section__cardsContainer {
+  display: flex;
+}
+.section__cardsContainer :nth-child(2) {
+  margin: 0 $marginCards;
+}
+.section__cardsContainer :nth-child(4) {
+  margin-left: $marginCards;
+}
+
+/* -------------------------------- ELEMENTS -------------------------------- */
+
+.section__title {
+  color: $color_quaternary;
+  font-weight: bold;
+  font-size: $font_sizeXxl;
+}
+.section__text {
+  color: white;
+  font-weight: bold;
+  font-size: $font_sizeXxl;
+  letter-spacing: $title_letterSpace;
+  margin-left: $marginTxtBtnArticle;
+}
+
+.section__img1 {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.section__img2 {
+  object-fit: cover;
+  height: 100%;
+}
+
+.section__btn {
+  margin: $marginTxtBtnArticle 0 $marginTxtBtnArticle $marginTxtBtnArticle;
+  height: 40px;
+}
+
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */

@@ -1,0 +1,198 @@
+/* ---------------------------------- THEME --------------------------------- */
+/* PALETTE */
+$color_primary: #555555;
+$color_secondary: #a3a3a3;
+$color_secondaryLight: #c7c7c7;
+$color_hoverBtn_background: #eeeeee;
+$color_tertiary: #ff8045;
+$color_quaternary: #275d38;
+
+// FONT SIZE
+$font_sizeM: 18px;
+$font_sizeSm: 12px;
+$font_sizeXl: 22px;
+
+// TIMING COLOR ANIMATION BTN
+$time: 300ms;
+
+// MARGIN
+$marginTopMenuOfNav: 10px;
+$absoluteTopPopMenu: 144px;
+$paddingFullBleed: 12%;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+// navigation
+.navBar {
+  height: 40px;
+}
+
+.navBar__ul {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 $paddingFullBleed;
+}
+
+.navBar__item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 40px;
+  cursor: pointer;
+  transition: all $time;
+}
+// menu spawn
+.menu {
+  position: fixed;
+  top: $absoluteTopPopMenu;
+  left: 0;
+  display: none;
+  padding-left: $paddingFullBleed;
+  background-color: white;
+  width: 100%;
+  min-height: 25%;
+  box-shadow: inset 0px 10px 20px -8px rgba(43, 43, 43, 0.2);
+}
+
+.subMenu__dropDown__item__options {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 455px; //var1
+  @at-root & ul {
+    list-style: none;
+    margin-top: $marginTopMenuOfNav;
+  }
+}
+
+.menuCards {
+  position: fixed;
+  top: $absoluteTopPopMenu;
+  left: 0;
+  display: none;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
+  padding: 25px;
+  // min-height: 100%;
+  box-shadow: inset 0px 10px 20px -8px rgba(43, 43, 43, 0.2);
+}
+
+/* -------------------------------- ELEMENTS -------------------------------- */
+// navigation
+.navBar__Btn {
+  font-size: $font_sizeM;
+}
+
+.navBar__icon {
+  margin-left: 5px;
+  height: 30px;
+  width: 30px;
+  fill: $color_secondary;
+}
+
+// menu1 spawn
+.menu__dropDown {
+  padding: 0;
+  padding-top: $marginTopMenuOfNav;
+  list-style: none;
+  color: $color_primary;
+  font-size: $font_sizeM;
+}
+
+.menu__dropDown__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 250px;
+  border-bottom: 1px solid $color_secondaryLight;
+}
+
+.subMenu__titleOption {
+  margin: 10px 0 0 0;
+}
+
+.subMenu__option {
+  margin: 10px 0;
+  font-size: $font_sizeM;
+}
+
+//menu2
+.menuCards__item {
+  margin: 0 15px;
+}
+
+/* ----------------------------- STATIC MODIFIER ---------------------------- */
+.fontColor_primary {
+  color: $color_primary;
+}
+
+.fontColor_tertiary {
+  color: $color_tertiary;
+}
+
+.iconTurnedRight {
+  transform: rotate(-90deg);
+}
+
+.icon_secondary {
+  fill: $color_secondary;
+}
+
+.icon_secondaryLight {
+  fill: $color_secondaryLight;
+}
+
+.icon_tertiary {
+  fill: $color_tertiary;
+}
+.underLineOff {
+  border-bottom: 0px solid transparent;
+}
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+// navigation
+.navBar__item:hover {
+  //navBar__item
+  @at-root & .--link__HoverQuaternary {
+    color: $color_quaternary;
+  }
+  @at-root & .--icon__HoverQuaternary {
+    fill: $color_quaternary;
+  }
+}
+.--linkHoverPrimary {
+  color: $color_quaternary;
+}
+
+.--underLineOnQuaternary:hover {
+  border-bottom: 3px solid $color_quaternary;
+}
+
+.--underLineOnTertiary:hover {
+  border-bottom: 3px solid $color_tertiary;
+}
+
+// menu show
+.menu__dropDown__item:hover {
+  cursor: pointer;
+  background-color: $color_hoverBtn_background;
+  transition: all $time;
+  padding-left: 3px;
+  @at-root & .menu__dropDown__item__select {
+    color: $color_quaternary;
+  }
+  @at-root & .navBar__icon {
+    fill: $color_quaternary;
+  }
+  @at-root & .subMenu__dropDown__item__options {
+    display: flex;
+  }
+}
+
+.--greenHoverLink:hover {
+  color: $color_quaternary;
+  text-decoration: underline;
+  font-weight: bolder;
+}

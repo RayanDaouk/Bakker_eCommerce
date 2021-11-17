@@ -1,0 +1,20 @@
+<section class="sectionContainer">
+    <div class="historicNav">
+        <a class="historicNav__link --historicNavHover historicNav_primary" routerLink="/">Page d'accueil</a>
+        <span> > </span>
+        <a class="historicNav__link historicNav_currentNav">Plantes hydroponiques</a>
+    </div>
+    <div class="containerAsideArticle">
+        <aside class="aside">
+            <app-filter (emitFilter)="getFilter($event)" (emitReset)="removeCollection()"></app-filter>
+        </aside>
+        <article class="collection">
+            <h2 class="collection__title">Plantes hydroponiques</h2>
+            <div class="collection__itemsContainer">
+                <app-cards-item-collection *ngFor="let item of collection" [src]="item.img" [text]="item.description"
+                    [itemName]="item.name" [price]="item.price" [item]="item">
+                </app-cards-item-collection>
+            </div>
+        </article>
+    </div>
+</section>

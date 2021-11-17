@@ -1,0 +1,36 @@
+/* ---------------------------------- THEME --------------------------------- */
+$color_quaternary: #275d38;
+$color_quaternaryLight: #41945b;
+$color_primary: #555555;
+/* -------------------------------- CONTAINER ------------------------------- */
+.cardsContainer {
+  display: block;
+  width: 150px;
+  height: 240px;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid white;
+  box-shadow: 1px 16px 35px -15px rgba(70, 24, 24, 0.2);
+}
+/* -------------------------------- ELEMENTS -------------------------------- */
+
+.cardsContainer__cardImg {
+  height: 150px;
+  width: 150px;
+}
+
+.cardsContainer__link {
+  text-decoration: none;
+  color: $color_primary;
+  text-align: center;
+}
+
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+
+.cardsContainer:hover {
+  border: 1px solid $color_quaternaryLight;
+  @at-root & .--selected {
+    color: $color_quaternary;
+    font-style: underline;
+  }
+}

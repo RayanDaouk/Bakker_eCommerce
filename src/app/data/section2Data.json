@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "image":"//cdn.shopify.com/s/files/1/0238/9196/8064/files/1b.800x722_Bloembollen_800x_crop_center.jpg?v=1633684809",
+        "text":"PLANTEZ VOS BULBES MAINTENANT"
+    },
+        {
+        "id":2,
+        "image":"//cdn.shopify.com/s/files/1/0238/9196/8064/files/2b.800x722_Vaste_planten_800x_crop_center.jpg?v=1633684851",
+        "text":"LES PLUS BELLES PLANTES VIVACES"
+    },
+        {
+        "id":3,
+        "image":"//cdn.shopify.com/s/files/1/0238/9196/8064/files/3b.800x722_Alle_bloempotten_800x_crop_center.jpg?v=1633684895",
+        "text":"CHOISISSEZ DES POTS COLORÉS"
+    },
+        {
+        "id":4,
+        "image":"//cdn.shopify.com/s/files/1/0238/9196/8064/files/4b.800x722_Kunstkerstbomen_800x_crop_center.jpg?v=1633684968",
+        "text":"LES ARBRES DE NOËL ARTIFICIELS"
+    }
+]

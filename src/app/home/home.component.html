@@ -1,0 +1,45 @@
+<!-- section1 -->
+<section class="section">
+    <article class="section__article1">
+        <img class="section__img1"
+            src="//cdn.shopify.com/s/files/1/0238/9196/8064/files/800x600_Mobiel_Woonmaand_actie_800x_crop_center.jpg?v=1633684648"
+            alt="picture of vegetable" />
+        <div class="section__txtBtnContainer">
+            <span class="section__text">
+                EN OCTOBRE LA <br>
+                DECO D'INTERIEUR<br>
+                EST À L'HONNEUR</span>
+            <btn-article class="section__btn" text="ACHETEZ MAINTENANT"></btn-article>
+        </div>
+    </article>
+    <article class="section__article2">
+        <img class="section__img2"
+            src="//cdn.shopify.com/s/files/1/0238/9196/8064/files/800x620_mobiel_Planten_in_pot_800x_crop_center.jpg?v=1633684716"
+            alt="picture of vegetable" />
+        <div class="section__txtBtnContainer">
+            <span class="section__text">
+                LA PLANTE EN POT,<br>
+                UNE SOLUTION<br>
+                PRATIQUE
+            </span>
+            <btn-article class="section__btn" text="LIVRAISON GRATUITE"></btn-article>
+        </div>
+    </article>
+</section>
+<!-- section2 -->
+<section>
+    <h1 class="section__title">EN OCTOBRE ON SE PRÉPARE POUR L'HIVER</h1>
+    <div class="section__cardsContainer">
+        <card-article class="section__card" *ngFor='let card of dataList' [src]='card.image' [text]='card.text'
+            btnText="LIVRAISON GRATUITE">
+        </card-article>
+    </div>
+</section>
+<!-- section3 -->
+<section>
+    <h1 class="section__title">LES BONS PLANS À DÉCOUVRIR</h1>
+    <div class="section__cardsContainer">
+        <large-card *ngFor='let card of dataList2' [src]='card.image' [text]='card.text' [tag]='card.tag'>
+        </large-card>
+    </div>
+</section>

@@ -1,0 +1,64 @@
+/* ---------------------------------- THEME --------------------------------- */
+/* PALETTE */
+$color_primary: #555555;
+$color_secondaryLight: #c7c7c7;
+$color_quaternary: #275d38;
+$color_tertiary: #ff8045;
+// FONT SIZE
+$font_sizeM: 18px;
+$font_sizeXl: 22px;
+
+$time: 300ms;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+.filters {
+  height: 100%;
+}
+
+.filters__list {
+  list-style: none;
+  padding: 0;
+}
+
+/* -------------------------------- ELEMENTS -------------------------------- */
+.filters__title {
+  margin: 0;
+}
+
+.filters__option {
+  letter-spacing: 1px;
+  font-weight: normal;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.filters__optionBtn {
+  background-color: white;
+  border: 1px solid $color_primary;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.filters__resetBtn {
+  border: none;
+  background-color: $color_tertiary;
+  color: white;
+  height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all $time;
+}
+
+/* ----------------------------- STATIC MODIFIER ---------------------------- */
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+.--isChecked {
+  background-color: $color_quaternary;
+}
+
+.--btnHoverBrightness:hover {
+  filter: brightness(1.3);
+}

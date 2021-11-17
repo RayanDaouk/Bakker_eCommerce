@@ -1,0 +1,65 @@
+/* -------------------------------------------------------------------------- */
+/*                                    THEME                                   */
+/* -------------------------------------------------------------------------- */
+
+// PALETTE
+$color_quaternary: #275d38;
+// $color_secondaryVeryLight: #f0f0f0;
+$color_primary: #555555;
+// $color_tertiary: #ff8045;
+
+// MARGIN ELEMENTS
+// $marginMainUnderNav: 150px;
+// $marginTxtBtnArticle: 25px;
+// $paddingFullBleed: 10%;
+
+// FONT SIZE
+// $font_sizeSm: 12px;
+// $font_sizeMm: 14px;
+// $font_sizeM: 18px;
+// $font_sizeXl: 22px;
+// $font_sizeXxl: 26px;
+// $title_letterSpace: 1px;
+
+// TIMING ANIMATION COLOR btn
+// $time: 300ms;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+
+.articleContainer {
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid $color_quaternary;
+}
+
+.articleContainer__textContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* -------------------------------- ELEMENTS -------------------------------- */
+
+.articleContainer__img {
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+}
+
+.articleContainer__btnDelete {
+  background-color: transparent;
+  border: none;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.articleContainer__deleteIcon {
+  fill: $color_primary;
+  width: 25px;
+}
+
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */

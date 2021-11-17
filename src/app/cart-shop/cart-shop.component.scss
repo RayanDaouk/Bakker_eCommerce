@@ -1,0 +1,170 @@
+/* -------------------------------------------------------------------------- */
+/*                                    THEME                                   */
+/* -------------------------------------------------------------------------- */
+
+// PALETTE
+$color_tertiary: #ff8045;
+$color_primary: #555555;
+$color_secondaryVeryLight: #f0f0f0;
+$color_quaternary: #275d38;
+$color-primaryOpacity: rgba(85, 85, 85, 0.5);
+// MARGIN ELEMENTS
+$paddingFullBleed: 12%;
+
+// FONT SIZE
+$font_sizeSm: 12px;
+$font_sizeM: 18px;
+$font_sizeXl: 22px;
+
+// TIMING ANIMATION OF POP CART
+$time: 300ms;
+/* -------------------------------- CONTAINER ------------------------------- */
+// BUTTON TO OPEN CART
+.cartContainer {
+  z-index: 0;
+  position: absolute;
+  right: $paddingFullBleed;
+  top: 45px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+// POP UP CART AFTER CLICK
+// background
+.detailsOfCart {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $color-primaryOpacity;
+  width: 100vw;
+  height: 100vh;
+  //animations
+  opacity: 0;
+  animation: fadeIn $time;
+  animation-fill-mode: forwards;
+}
+// details
+.detailsOfCart__articles {
+  z-index: 2;
+  background-color: $color_secondaryVeryLight;
+  position: absolute;
+  top: 0;
+  right: -25vw;
+  height: 100vh;
+  width: 25vw;
+  //animations
+  animation: slideRightToLeft $time;
+  animation-fill-mode: forwards;
+}
+
+// details__topBar
+.detailsOfCart__articles__topBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: white;
+  border-bottom: 1px solid $color_quaternary;
+}
+
+// details__bottomBar
+.detailsOfCart__bottomBar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detailsOfCart__bottomBar__totalPrice {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: $font_sizeM;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid $color_quaternary;
+  border-bottom: 1px solid $color_quaternary;
+}
+
+/* -------------------------------- ELEMENTS -------------------------------- */
+// BUTTON TO OPEN CART
+.cart_icon {
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.cartContainer__numberArticle {
+  z-index: 2;
+  background-color: $color_tertiary;
+  color: white;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: $font_sizeSm;
+}
+
+// POP UP CART AFTER CLICK
+
+.topBar__title {
+  color: $color_primary;
+  font-size: $font_sizeXl;
+}
+
+.topBar__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.topBar__btn__icon {
+  width: 20px;
+  fill: $color_primary;
+}
+
+.detailsOfCart__bottomBar__btn {
+  height: 40px;
+  width: 200px;
+  background-color: $color_tertiary;
+  color: white;
+  font-size: $font_sizeM;
+  border: none;
+  cursor: pointer;
+  margin: 5px auto;
+}
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+.--cartHoverTertiary:hover {
+  color: $color_tertiary;
+  cursor: pointer;
+}
+// POP UP CART AFTER CLICK
+/* -------------------------------- KEYFRAME -------------------------------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    right: -25vw;
+  }
+  100% {
+    right: 0;
+  }
+}

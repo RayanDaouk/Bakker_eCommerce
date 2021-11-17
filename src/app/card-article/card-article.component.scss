@@ -1,0 +1,43 @@
+// FONT SIZE
+$font_sizeXxl: 26px;
+$title_letterSpace: 1px;
+
+// MARGIN
+$marginTxtBtnArticle: 25px;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+.containerArticle {
+  position: relative;
+}
+
+.containerArticle__txtBtnContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+}
+/* -------------------------------- ELEMENTS -------------------------------- */
+
+.containerArticle__img {
+  width: 100%;
+  height: 100%;
+}
+
+.containerArticle__text {
+  color: white;
+  font-weight: bold;
+  font-size: $font_sizeXxl;
+  letter-spacing: $title_letterSpace;
+  margin-left: $marginTxtBtnArticle;
+}
+
+.containerArticle__btn {
+  margin: $marginTxtBtnArticle 0 $marginTxtBtnArticle $marginTxtBtnArticle;
+  height: 40px;
+}
+
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
