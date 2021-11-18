@@ -8,7 +8,6 @@ import { HomeComponent } from './home/home.component';
 import { CardArticleComponent } from './card-article/card-article.component';
 import { BtnArticleComponent } from './btn-article/btn-article.component';
 import { LargeCardComponent } from './large-card/large-card.component';
-import { CollectionComponent } from './collection/collection.component';
 import { DatasService } from './services/datas.service';
 import { CardsItemCollectionComponent } from './cards-item-collection/cards-item-collection.component';
 import { PlantesHydroponiquesComponent } from './collection/plantes-hydroponiques/plantes-hydroponiques.component';
@@ -26,7 +25,6 @@ import { FilterComponent } from './filter/filter.component';
     CardArticleComponent,
     BtnArticleComponent,
     LargeCardComponent,
-    CollectionComponent,
     CardsItemCollectionComponent,
     PlantesHydroponiquesComponent,
     BouquetsFleursSecheesComponent,
