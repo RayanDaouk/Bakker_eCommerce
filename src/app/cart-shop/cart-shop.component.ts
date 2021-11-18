@@ -11,7 +11,7 @@ export class CartShopComponent implements OnInit {
   isActivated: boolean;
   numberArticles!: number;
   productList: any = [];
-  totalCost: number = 0;
+  totalCost: number | string = 0;
 
   constructor(private _AddInCartService: AddInCartService) {
     this.isActivated = false;
@@ -23,7 +23,7 @@ export class CartShopComponent implements OnInit {
       this.numberArticles = res.length;
       console.log('res:', res);
       this.productList = res;
-      this.totalCost = this._AddInCartService.getTotalPrice();
+      this.totalCost = this._AddInCartService.getTotalPrice().toFixed(2);
       console.log('totalCost:', this.totalCost);
     });
   }

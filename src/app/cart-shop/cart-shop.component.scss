@@ -70,6 +70,12 @@ $time: 300ms;
   border-bottom: 1px solid $color_quaternary;
 }
 
+// list of article
+.detailsOfCart__articles__list {
+  overflow: auto;
+  height: 83%;
+}
+
 // details__bottomBar
 .detailsOfCart__bottomBar {
   position: absolute;
@@ -78,6 +84,7 @@ $time: 300ms;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: white;
 }
 
 .detailsOfCart__bottomBar__totalPrice {

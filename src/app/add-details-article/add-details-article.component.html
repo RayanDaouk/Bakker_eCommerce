@@ -11,6 +11,25 @@
         <img class="detailsArticle__img" src={{src}} alt="sourceImg" />
         <div class="detailsArticle__containerText">
             <h2 class="detailsArticle__title">{{text}}</h2>
+            <div>
+                <span class="detailsArticle__msg msg_success" *ngIf="addOrUpdate[1]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="detailsArticle__msg__icon" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                    Un nouvel article a été ajouté au
+                    panier.</span>
+                <span class="detailsArticle__msg msg_update" *ngIf="addOrUpdate[0]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="detailsArticle__msg__icon" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    L'article déjà présent dans le
+                    panier a
+                    été mis à jour.</span>
+            </div>
             <div class="detailsArticle__price">
                 <span class="price__cost">{{price}}€</span>
                 <div>

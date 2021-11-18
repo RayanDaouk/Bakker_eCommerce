@@ -129,6 +129,30 @@ $time: 300ms;
   align-items: center;
   font-size: $font_sizeXxl;
 }
+
+// Message
+.detailsArticle__msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: $font_sizeM;
+}
+
+.detailsArticle__msg__icon {
+  height: $font_sizeM;
+  margin-right: 10px;
+}
+
+/* ----------------------------- STATIC MODIFIER ---------------------------- */
+.msg_success {
+  background-color: $color_quaternary;
+}
+
+.msg_update {
+  background-color: $color_tertiary;
+}
+
 /* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
 
 .--price__btnHoverBrightness:hover {
