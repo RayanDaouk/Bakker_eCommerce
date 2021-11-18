@@ -22,7 +22,8 @@
         </div>
         <div *ngIf='numberArticles != 0' class="detailsOfCart__articles__list">
             <app-article-in-cart *ngFor="let item of productList" [img]='item.img' [text]='item.description'
-                [count]='item.quantity' [price]='item.price' [cost]='item.cost' [item]='item'></app-article-in-cart>
+                [count]='item.quantity' [price]='item.price' [cost]='item.cost.toFixed(2)' [item]='item'>
+            </app-article-in-cart>
         </div>
         <div class="detailsOfCart__bottomBar">
             <div class="detailsOfCart__bottomBar__totalPrice">

@@ -21,7 +21,7 @@ export class AddInCartService {
     this.productList.next(product);
   }
 
-  addToCart(product: any) {
+  addToCart(product: any, addOrUpdate: Array<boolean>) {
     console.log('addToCartProduct:', product);
     //Check if product is in array
     if (this.cartItemList.indexOf(product) !== -1) {
@@ -29,13 +29,16 @@ export class AddInCartService {
       this.targetUpdate = this.cartItemList.indexOf(product);
       console.log('targetUpdate:', this.targetUpdate);
       this.cartItemList[this.targetUpdate].quantity = product.quantity;
+      this.productList.next(this.cartItemList);
       console.log('service cartItemList:', this.cartItemList);
+      return (addOrUpdate = this.updateArticleInCartMsg(addOrUpdate));
     } else {
       // if is not here, push
       this.cartItemList.push(product);
       this.productList.next(this.cartItemList);
       this.getTotalPrice();
       console.log('service cartItemList:', this.cartItemList);
+      return (addOrUpdate = this.addInCartMsg(addOrUpdate));
     }
   }
   getTotalPrice(): number {
@@ -58,5 +61,15 @@ export class AddInCartService {
   removeAllCart() {
     this.cartItemList = [];
     this.productList.next(this.cartItemList);
+  }
+
+  addInCartMsg(addOrUpdate: Array<boolean>) {
+    console.log('boolean in service:', addOrUpdate);
+    return (addOrUpdate = [false, true]);
+  }
+
+  updateArticleInCartMsg(addOrUpdate: Array<boolean>) {
+    console.log('boolean in service:', addOrUpdate);
+    return (addOrUpdate = [true, false]);
   }
 }

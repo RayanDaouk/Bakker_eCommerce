@@ -19,6 +19,7 @@ export class AddDetailsArticleComponent implements OnInit {
   product: any;
   quantity: number = 1;
   cost: any;
+  addOrUpdate: Array<boolean> = [false, false];
   constructor(private _addInCartService: AddInCartService) {}
 
   ngOnInit(): void {
@@ -52,6 +53,9 @@ export class AddDetailsArticleComponent implements OnInit {
     this.product.cost = this.cost;
     this.product.quantity = this.quantity;
     console.log('Add in cart:', this.product);
-    this._addInCartService.addToCart(this.product);
+    this.addOrUpdate = this._addInCartService.addToCart(
+      this.product,
+      this.addOrUpdate
+    );
   }
 }
