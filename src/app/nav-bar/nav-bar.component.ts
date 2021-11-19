@@ -9,10 +9,6 @@ import gift from '../data/ideeCadeau.json';
 })
 export class NavBarComponent implements OnInit {
   // constructor() {}
-  nav1: any;
-  menu1: any;
-  nav2: any;
-  menu2: any;
   giftList: any = [];
 
   ngOnInit(): void {
