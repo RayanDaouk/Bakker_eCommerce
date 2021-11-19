@@ -151,6 +151,12 @@ $paddingFullBleed: 12%;
 .underLineOff {
   border-bottom: 0px solid transparent;
 }
+
+// default navBar
+.--menu1,
+.--menu2 {
+  display: none;
+}
 /* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
 // navigation
 .navBar__item:hover {
@@ -172,6 +178,24 @@ $paddingFullBleed: 12%;
 
 .--underLineOnTertiary:hover {
   border-bottom: 3px solid $color_tertiary;
+}
+
+//spawn navigation when mouseIn and mouseOut
+.--nav1:hover {
+  .--menu1 {
+    display: block;
+  }
+}
+.--nav2:hover {
+  .--menu2 {
+    display: flex;
+  }
+}
+.--menu1:hover {
+  display: block;
+}
+.--menu2:hover {
+  display: flex;
 }
 
 // menu show
