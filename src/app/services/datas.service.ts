@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import dataCollection from '../data/ideeCadeau.json';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -7,24 +7,17 @@ import dataCollection from '../data/ideeCadeau.json';
 export class DatasService {
   collection1: Array<object> = [];
   collection2: Array<object> = [];
-  collection3: Array<object> = [];
-  collection4: Array<object> = [];
 
-  constructor() {}
-
-  getCollection1(): Array<object> {
-    return (this.collection1 = dataCollection[0].collection);
-  }
-
-  getCollection2(): Array<object> {
-    return (this.collection2 = dataCollection[1].collection);
-  }
-
-  getCollection3(): Array<object> {
-    return (this.collection3 = dataCollection[2].collection);
-  }
-
-  getCollection4(): Array<object> {
-    return (this.collection4 = dataCollection[3].collection);
+  constructor(private http: HttpClient) {
+    http.get('http://localhost:3000/datas').subscribe(
+      (response: any) => {
+        console.log('GET HTTP:', response);
+        this.collection1 = response[0].collection;
+        this.collection2 = response[1].collection;
+      },
+      (error: any) => {
+        console.error('Get data from json server failed:', error);
+      }
+    );
   }
 }

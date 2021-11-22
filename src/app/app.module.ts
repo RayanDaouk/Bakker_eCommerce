@@ -16,6 +16,7 @@ import { CartShopComponent } from './cart-shop/cart-shop.component';
 import { AddDetailsArticleComponent } from './add-details-article/add-details-article.component';
 import { ArticleInCartComponent } from './article-in-cart/article-in-cart.component';
 import { FilterComponent } from './filter/filter.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import { FilterComponent } from './filter/filter.component';
     ArticleInCartComponent,
     FilterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [DatasService],
   bootstrap: [AppComponent],
 })
