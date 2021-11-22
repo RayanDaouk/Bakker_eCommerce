@@ -14,11 +14,11 @@ export class PlantesHydroponiquesComponent implements OnInit {
     public _DatasService: DatasService,
     private _FilterService: FilterService
   ) {
-    this.savedCollection = this._DatasService.getCollection1();
+    this.savedCollection = this._DatasService.collection1;
   }
 
   getCollection() {
-    this.collection = this._DatasService.getCollection1();
+    this.collection = this._DatasService.collection1;
     console.log('collection1:', this.collection);
   }
 

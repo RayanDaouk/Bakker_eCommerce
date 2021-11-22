@@ -15,11 +15,11 @@ export class BouquetsFleursSecheesComponent implements OnInit {
     public _DatasService: DatasService,
     private _FilterService: FilterService
   ) {
-    this.savedCollection = this._DatasService.getCollection2();
+    this.savedCollection = this._DatasService.collection2;
   }
 
   getCollection() {
-    this.collection = this._DatasService.getCollection2();
+    this.collection = this._DatasService.collection2;
     console.log('collection1:', this.collection);
   }
 
