@@ -15,6 +15,7 @@ export class FilterService {
     savedCollection: any[]
   ) {
     this.getSavedCollection = savedCollection;
+    console.log('FILTER_articleList:', articleList);
     articleList = savedCollection;
     this.newList = articleList.filter((item: any) => {
       return item.price > min && item.price < max;

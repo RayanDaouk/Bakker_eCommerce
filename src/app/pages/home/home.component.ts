@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import section2Data from '../data/section2Data.json';
-import section3Data from '../data/section3Data.json';
+import section2Data from '../../../assets/data/section2Data.json';
+import section3Data from '../../../assets/data/section3Data.json';
 
 @Component({
   selector: 'home',
