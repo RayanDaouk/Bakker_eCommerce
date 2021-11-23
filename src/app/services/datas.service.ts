@@ -12,8 +12,6 @@ export class DatasService {
 
   constructor(private http: HttpClient) {}
 
-  // ici je renvoie un observable, le typage s'écrit aussi <any[]>
-  // un observable est de base asynchrone
   getDatas$(): Observable<Array<any>> {
     return this.http.get<Array<any>>('http://localhost:3000/datas');
   }
