@@ -12,7 +12,6 @@ export class AddInCartService {
   constructor() {}
 
   getProducts() {
-    console.log('TESTnumbProd:', this.productList.asObservable());
     return this.productList.asObservable();
   }
 
