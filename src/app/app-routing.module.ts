@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { PlantesHydroponiquesComponent } from './collection/plantes-hydroponiques/plantes-hydroponiques.component';
-import { BouquetsFleursSecheesComponent } from './collection/bouquets-fleurs-sechees/bouquets-fleurs-sechees.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PlantesHydroponiquesComponent } from './pages/collection/plantes-hydroponiques/plantes-hydroponiques.component';
+import { BouquetsFleursSecheesComponent } from './pages/collection/bouquets-fleurs-sechees/bouquets-fleurs-sechees.component';
 const routes: Routes = [
   {
     path: '',
