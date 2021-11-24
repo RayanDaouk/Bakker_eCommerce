@@ -41,7 +41,10 @@ $marginText: 10px;
 }
 
 /* -------------------------------- ELEMENTS -------------------------------- */
-
+.cardsContainer__img {
+  max-height: 250px;
+  object-fit: cover;
+}
 .cardsContainer__description {
   padding-left: $marginText;
   font-size: $font_sizeM;
