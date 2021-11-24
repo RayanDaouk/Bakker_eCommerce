@@ -17,19 +17,20 @@ export class PlantesHydroponiquesComponent implements OnInit {
     private datasService: DatasService,
     private _FilterService: FilterService
   ) {}
-  ngOnInit(): void {
-    this.getCollection();
-  }
 
   getCollection() {
     console.log('getCollection');
     this.datas$ = this.datasService.getDatas$();
-    console.log('datas$TEST:', this.datas$);
     this.datas$.subscribe((res: any) => {
       this.collection = res[0].collection;
       this.savedCollection = this.collection;
     });
   }
+
+  ngOnInit(): void {
+    this.getCollection();
+  }
+
   getFilter(toggle: Array<boolean>) {
     console.log('toggle', toggle, 'collection:', this.collection);
     toggle[0]
@@ -40,9 +41,8 @@ export class PlantesHydroponiquesComponent implements OnInit {
           this.savedCollection
         ))
       : null;
-
     toggle[1]
-      ? (this.collection.next = this._FilterService.filteringPrice(
+      ? (this.collection = this._FilterService.filteringPrice(
           20,
           29,
           this.collection,
@@ -65,7 +65,6 @@ export class PlantesHydroponiquesComponent implements OnInit {
           this.savedCollection
         ))
       : null;
-    return this.collection;
   }
 
   removeCollection() {
