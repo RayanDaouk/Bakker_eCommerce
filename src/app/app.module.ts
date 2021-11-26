@@ -17,6 +17,7 @@ import { AddDetailsArticleComponent } from './add-details-article/add-details-ar
 import { ArticleInCartComponent } from './article-in-cart/article-in-cart.component';
 import { FilterComponent } from './filter/filter.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CountOfArticleComponent } from './count-of-article/count-of-article.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     AddDetailsArticleComponent,
     ArticleInCartComponent,
     FilterComponent,
+    CountOfArticleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [DatasService],
