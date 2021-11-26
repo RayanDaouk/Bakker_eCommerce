@@ -34,4 +34,8 @@ export class CartShopComponent implements OnInit {
   disabled() {
     this.isActivated = false;
   }
+
+  updateTotalProduct(product: any) {
+    this._AddInCartService.updateCartItemList(product);
+  }
 }

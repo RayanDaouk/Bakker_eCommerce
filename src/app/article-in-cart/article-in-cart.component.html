@@ -4,6 +4,9 @@
         <span>{{text}}</span>
         <span>{{count}} x {{price}}€</span>
         <span>total cost: {{cost}}€</span>
+        <app-count-of-article (updatePrice)="updatePriceMultCount($event)"
+            (updateQuantity)="updateCountOfArticle($event)" [passItemToCart]="product" [quantity]="quantity">
+        </app-count-of-article>
     </div>
     <button class="articleContainer__btnDelete" type="button" (click)='removeCartItem(item)'>
         <svg xmlns="http://www.w3.org/2000/svg" class="articleContainer__deleteIcon" viewBox="0 0 20 20"

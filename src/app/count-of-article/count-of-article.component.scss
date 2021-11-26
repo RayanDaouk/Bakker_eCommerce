@@ -1,0 +1,45 @@
+/* ---------------------------------- THEME --------------------------------- */
+/* PALETTE */
+$color_primary: #555555;
+$color_secondaryVeryLight: #f0f0f0;
+$color_quaternary: #275d38;
+
+// FONT SIZE
+$font_sizeXxl: 26px;
+// Time animation of btn:
+$time: 300ms;
+
+/* -------------------------------- CONTAINER ------------------------------- */
+.price__addRemove {
+  border: 1px solid $color_secondaryVeryLight;
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  color: $color_primary;
+}
+
+/* -------------------------------- ELEMENTS -------------------------------- */
+
+.price__addRemove__btn {
+  background-color: transparent;
+  border: none;
+  font-size: $font_sizeXxl;
+  cursor: pointer;
+  color: $color_primary;
+  width: 30%;
+}
+
+.price__addRemove__count {
+  display: flex;
+  align-items: center;
+  font-size: $font_sizeXxl;
+}
+
+/* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+.--btnHoverPrimary:hover {
+  cursor: pointer;
+  background-color: $color_quaternary;
+  color: white;
+  transition: all $time;
+}

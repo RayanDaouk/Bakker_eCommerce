@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AddInCartService } from '../services/add-in-cart.service';
 
 @Component({
@@ -13,11 +13,34 @@ export class ArticleInCartComponent implements OnInit {
   @Input() public count?: number;
   @Input() public price?: number;
   @Input() public cost?: number;
+  @Output() updateTotalPrice = new EventEmitter();
+
+  product: any;
+  quantity: any;
+  totalPrice: any;
+
   constructor(private _addInCartService: AddInCartService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.product = this.item;
+    this.quantity = this.count;
+    this.totalPrice = this.cost;
+    console.log('ThisProduct:', this.product);
+  }
 
   removeCartItem(item: any) {
+    console.log('item in cart:', item);
     this._addInCartService.removeCartItem(item);
+  }
+
+  updatePriceMultCount(cost: number) {
+    this.product.cost = cost;
+    this.updateTotalPrice.emit(this.product);
+    console.log('InCartUpdPrice:', this.product);
+  }
+
+  updateCountOfArticle(count: number) {
+    this.product.quantity = count;
+    console.log('InCartUpdCount:', this.product);
   }
 }

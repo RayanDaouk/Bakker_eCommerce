@@ -106,30 +106,6 @@ $time: 300ms;
   font-weight: 500;
 }
 
-.price__addRemove {
-  border: 1px solid $color_secondaryVeryLight;
-  width: 100px;
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  padding: 10px;
-  color: #555555;
-}
-
-.price__addRemove__btn {
-  background-color: transparent;
-  border: none;
-  font-size: $font_sizeXxl;
-  cursor: pointer;
-  color: #555555;
-}
-
-.price__addRemove__count {
-  display: flex;
-  align-items: center;
-  font-size: $font_sizeXxl;
-}
-
 // Message
 .detailsArticle__msg {
   display: flex;
