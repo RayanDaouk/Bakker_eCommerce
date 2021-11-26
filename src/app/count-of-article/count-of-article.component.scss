@@ -8,8 +8,8 @@ $color_quaternary: #275d38;
 $font_sizeXxl: 26px;
 // Time animation of btn:
 $time: 300ms;
-
 /* -------------------------------- CONTAINER ------------------------------- */
+
 .price__addRemove {
   border: 1px solid $color_secondaryVeryLight;
   width: 130px;
@@ -18,7 +18,6 @@ $time: 300ms;
   height: 60px;
   color: $color_primary;
 }
-
 /* -------------------------------- ELEMENTS -------------------------------- */
 
 .price__addRemove__btn {
@@ -35,8 +34,8 @@ $time: 300ms;
   align-items: center;
   font-size: $font_sizeXxl;
 }
-
 /* ---------------------------- DYNAMIC MODIFIER ---------------------------- */
+
 .--btnHoverPrimary:hover {
   cursor: pointer;
   background-color: $color_quaternary;
