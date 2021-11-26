@@ -34,13 +34,9 @@
                 <span class="price__cost">{{price}}€</span>
                 <div>
                     <h4 class="price__addRemove__title">Quantité</h4>
-                    <div class="price__addRemove">
-                        <button class="price__addRemove__btn" type="button" (click)="remove($event) ">-</button>
-                        <span class="price__addRemove__count">
-                            {{quantity}}
-                        </span>
-                        <button class="price__addRemove__btn" type="button" (click)="add()">+</button>
-                    </div>
+                    <app-count-of-article (updatePrice)="updatePriceMultCount($event)"
+                        (updateQuantity)="updateCountOfArticle($event)" [passItemToCart]="product"
+                        [quantity]="quantity"></app-count-of-article>
                 </div>
                 <button class="price__btnAddInCart --price__btnHoverBrightness" type="button" (click)="addToCart()">
                     Ajouter au panier

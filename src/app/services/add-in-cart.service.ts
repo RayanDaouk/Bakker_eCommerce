@@ -71,4 +71,20 @@ export class AddInCartService {
     console.log('boolean in service:', addOrUpdate);
     return (addOrUpdate = [true, false]);
   }
+
+  updateCartItemList(product: any) {
+    console.log(
+      'lobjet actuel: product:',
+      product,
+      ' productListActuel:',
+      this.productList
+    );
+    let newProductList = this.productList.value;
+    newProductList.map((item: any) => {
+      if (item.id === product.id) {
+        item = product;
+      }
+    });
+    this.productList.next(newProductList);
+  }
 }

@@ -25,7 +25,8 @@ export class AddDetailsArticleComponent implements OnInit {
   ngOnInit(): void {
     this.cost = this.price;
     this.product = this.passItemToCart.value;
-    console.log('product:', this.product.price);
+    this.product.cost = this.cost;
+    this.product.quantity = this.quantity;
   }
 
   disabledPop() {
@@ -34,28 +35,19 @@ export class AddDetailsArticleComponent implements OnInit {
     console.log('click and product=:', this.product);
   }
 
-  add() {
-    this.quantity++;
-    this.cost = this.product.price * this.quantity;
-    console.log('cost=', this.cost);
-  }
-
-  remove(e: any) {
-    console.log(e);
-    if (this.quantity > 1) {
-      this.quantity--;
-    }
-    this.cost = this.product.price * this.quantity;
-    console.log('cost=', this.cost);
-  }
-
   addToCart() {
-    this.product.cost = this.cost;
-    this.product.quantity = this.quantity;
     console.log('Add in cart:', this.product);
     this.addOrUpdate = this._addInCartService.addToCart(
       this.product,
       this.addOrUpdate
     );
+  }
+
+  updatePriceMultCount(cost: number) {
+    this.product.cost = cost;
+  }
+
+  updateCountOfArticle(count: number) {
+    this.product.quantity = count;
   }
 }
