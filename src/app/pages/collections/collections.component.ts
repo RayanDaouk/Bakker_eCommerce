@@ -1,34 +1,48 @@
 import { Component, OnInit } from '@angular/core';
-import { DatasService } from '../../../services/datas.service';
-import { FilterService } from '../../../services/filter.service';
+import { DatasService } from '../../services/datas.service';
+import { FilterService } from '../../services/filter.service';
 import { Observable, of } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-plantes-hydroponiques',
-  templateUrl: './plantes-hydroponiques.component.html',
-  styleUrls: ['./plantes-hydroponiques.component.scss'],
+  selector: 'app-collections',
+  templateUrl: './collections.component.html',
+  styleUrls: ['./collections.component.scss'],
 })
-export class PlantesHydroponiquesComponent implements OnInit {
+export class CollectionsComponent implements OnInit {
   datas$: Observable<Array<any>> = of([]);
   collection: any = [];
   savedCollection: any[] = [];
+  nameCollection: string | null = '';
 
   constructor(
     private datasService: DatasService,
-    private _FilterService: FilterService
+    private _FilterService: FilterService,
+    private route: ActivatedRoute
   ) {}
 
-  getCollection() {
+  getCollection(nameCollection: string | null) {
+    this.nameCollection = nameCollection;
     console.log('getCollection');
     this.datas$ = this.datasService.getDatas$();
     this.datas$.subscribe((res: any) => {
-      this.collection = res[0].collection;
-      this.savedCollection = this.collection;
+      console.log('res:', res);
+      res.map((item: any) => {
+        if (item.name === nameCollection) {
+          console.log("J'ai trouvé la collection!");
+          this.collection = item.collection;
+          this.savedCollection = this.collection;
+          console.log('this.collection=', this.collection);
+        }
+      });
     });
   }
 
   ngOnInit(): void {
-    this.getCollection();
+    this.route.paramMap.subscribe((params) => {
+      console.log('params:', params.get('name'));
+      this.getCollection(params.get('name'));
+    });
   }
 
   getFilter(toggle: Array<boolean>) {
@@ -68,6 +82,6 @@ export class PlantesHydroponiquesComponent implements OnInit {
   }
 
   removeCollection() {
-    this.getCollection();
+    this.getCollection(this.nameCollection);
   }
 }

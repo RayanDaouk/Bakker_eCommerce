@@ -10,14 +10,13 @@ import { BtnArticleComponent } from './btn-article/btn-article.component';
 import { LargeCardComponent } from './large-card/large-card.component';
 import { DatasService } from './services/datas.service';
 import { CardsItemCollectionComponent } from './cards-item-collection/cards-item-collection.component';
-import { PlantesHydroponiquesComponent } from './pages/collection/plantes-hydroponiques/plantes-hydroponiques.component';
-import { BouquetsFleursSecheesComponent } from './pages/collection/bouquets-fleurs-sechees/bouquets-fleurs-sechees.component';
 import { CartShopComponent } from './cart-shop/cart-shop.component';
 import { AddDetailsArticleComponent } from './add-details-article/add-details-article.component';
 import { ArticleInCartComponent } from './article-in-cart/article-in-cart.component';
 import { FilterComponent } from './filter/filter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CountOfArticleComponent } from './count-of-article/count-of-article.component';
+import { CollectionsComponent } from './pages/collections/collections.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +27,12 @@ import { CountOfArticleComponent } from './count-of-article/count-of-article.com
     BtnArticleComponent,
     LargeCardComponent,
     CardsItemCollectionComponent,
-    PlantesHydroponiquesComponent,
-    BouquetsFleursSecheesComponent,
     CartShopComponent,
     AddDetailsArticleComponent,
     ArticleInCartComponent,
     FilterComponent,
     CountOfArticleComponent,
+    CollectionsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [DatasService],
